@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gabriela&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="header flex">
+      <div class="logo">
+        <h1>Rolex</h1>
+      </div>
+      <div class="menu-icon flex">
+        <p>MENU</p>
+        <div class="bars flex col">
+          <div class="bar-1"></div>
+          <div class="bar-2"></div>
+          <div class="bar-3"></div>
+        </div>
+      </div>
+    </div>
+    <div class="top">
+      <div class="dots">
+        <div class="dot-1"></div>
+        <div class="dot-2"></div>
+      </div>
+      <div class="main flex">
+        <div class="video">
+          <video src="./rolex.webm" autoplay loop></video>
+        </div>
+        <div class="content flex col">
+          <h2>Watches</h2>
+          <p>Get Your Watch Now</p>
+          <button>Explore</button>
+        </div>
+      </div>
+      <div class="main oyster flex" style="padding-top: 20vh">
+        <div class="video">
+          <video src="./second.webm" autoplay loop></video>
+        </div>
+        <div class="content flex col">
+          <h2>Making</h2>
+          <p>The Anatomy Of A Rolex</p>
+          <button>Learn More</button>
+        </div>
+      </div>
+    </div>
+    <div class="info flex">
+      <h1>Hello</h1>
+    </div>
+  </body>
+</html>
+
+<script>
+  let divMain = document.querySelector(".main");
+  let Oyster = document.querySelector(".oyster");
+  let dotOne = document.querySelector(".dot-1");
+  let dotTwo = document.querySelector(".dot-2");
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "ArrowDown") {
+      divMain.style.transform = "translateY(-100vh)";
+      Oyster.style.transform = "translateY(-120vh)";
+      dotOne.style.height = "10px";
+      dotTwo.style.height = "100px";
+    }
+  });
+
+  document.addEventListener("keyup", (e) => {
+    if (e.key === "ArrowUp") {
+      divMain.style.transform = "translateY(0vh)";
+      Oyster.style.transform = "translateY(100vh)";
+      dotOne.style.height = "100px";
+      dotTwo.style.height = "10px";
+    }
+  });
+</script>

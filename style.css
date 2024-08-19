@@ -1,0 +1,173 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Gabriela";
+  transition: 0.3s;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.col {
+  flex-direction: column;
+}
+
+body {
+  background: rgb(0, 0, 0, 1);
+}
+
+.header {
+  position: fixed;
+  width: calc(100% - 200px);
+  padding-left: 100px;
+  padding-right: 100px;
+  justify-content: space-between;
+  padding-top: 3vh;
+  z-index: 100;
+  color: white;
+  .logo {
+    h1 {
+      font-family: Gabriela;
+      font-weight: 600;
+    }
+  }
+  .menu-icon {
+    gap: 10px;
+    cursor: pointer;
+    p {
+      font-family: poppins;
+    }
+    .bars {
+      gap: 5px;
+      .bar-1 {
+        width: 30px;
+        height: 2px;
+        background: white;
+      }
+      .bar-2 {
+        width: 30px;
+        height: 2px;
+        background: white;
+      }
+      .bar-3 {
+        width: 30px;
+        height: 2px;
+        background: white;
+      }
+    }
+  }
+}
+
+.top {
+  width: 100%;
+  overflow: hidden !important;
+  height: 100vh !important;
+  .dots {
+    position: absolute;
+    top: calc(50% - 30px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 10;
+    right: 100px;
+    gap: 10px;
+    .dot-1 {
+      width: 10px;
+      height: 100px;
+      border-radius: 5px;
+      background: white;
+    }
+    .dot-2 {
+      width: 10px;
+      height: 10px;
+      border-radius: 5px;
+      background: white;
+    }
+  }
+  .main {
+    width: 100%;
+    height: 100vh !important;
+    overflow: hidden !important;
+    .video {
+      width: 100%;
+      height: 110vh;
+
+      video {
+        width: 100%;
+        object-fit: cover;
+        height: 100%;
+      }
+    }
+    .content {
+      width: 100%;
+      height: 100vh;
+      position: absolute;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0.5), black);
+      color: white;
+      h1 {
+        font-size: 5rem;
+        font-family: Gabriela;
+      }
+      h2 {
+        font-size: 15rem;
+        font-family: Gabriela;
+        position: relative;
+        line-height: 300px;
+      }
+      p {
+        font-size: 3rem;
+      }
+      button {
+        overflow: hidden;
+        width: 300px;
+        height: 70px;
+        background: linear-gradient(
+          to right,
+          rgba(255, 255, 255, 0.5),
+          rgba(0, 0, 0, 0.1)
+        );
+        position: relative;
+        border-radius: 35px;
+        border: none;
+        margin-top: 50px;
+        font-size: 1.2rem;
+        color: white;
+        backdrop-filter: blur(10px);
+        cursor: pointer;
+      }
+      button::after {
+        content: "";
+        width: 5px;
+        height: 120%;
+        background: rgba(255, 255, 255, 0.2);
+        position: absolute;
+        top: -10%;
+        transform: rotate(20deg);
+        left: -10%;
+        transition: 0.3s;
+      }
+      button:hover::after {
+        left: 110%;
+      }
+    }
+  }
+  .oyster {
+    height: 110vh !important;
+    overflow: hidden;
+    justify-content: space-between;
+    color: white;
+    width: 100%;
+    .content {
+      height: 110vh;
+    }
+  }
+}
+
+.info {
+  height: 200vh;
+  color: white;
+}
